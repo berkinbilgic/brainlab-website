@@ -10,6 +10,7 @@ Source of the website of the BRAIN Lab (Bilgic Reconstruction Acquisition for Im
 | `team.html` | Faculty, research fellows, students and alumni |
 | `publications.html` | Invited and proffered talks, journal papers, conference papers and abstracts, theses, patents |
 | `software.html` | Open-source code, data and pulse sequences, most of them in the [berkinbilgic](https://github.com/berkinbilgic) repositories |
+| `images/` | Photos shown on the home and team pages |
 
 ## Notes
 
