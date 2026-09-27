@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- Content from team.html in a layout inspired by the PRIME Lab website (primelab.korea.ac.kr). CSS written for this page. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Berkin Bilgic - BRAIN Lab, Martinos Center for Biomedical Imaging, MGH / Harvard Medical School">
+<title>Team - BRAIN Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#F5F7FA; --panel:#FFFFFF; --ink:#0E1620; --ink-dim:#57687A; --ink-faint:#8C9AA8; --line:#DCE3EA; --line-strong:#C3CDD8; --blue:#1E4FD8; --blue-deep:#122C7A; --signal:#FF5A36; --cyan:#0FA8B8; --maxw:1180px; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.55; -webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size:48px 48px; background-attachment:fixed; }
+body::before { content:''; position:fixed; inset:0; background:linear-gradient(180deg, rgba(245,247,250,.55), rgba(245,247,250,.92) 40%); pointer-events:none; z-index:0; }
+a { color:var(--blue); }
+.wrap { max-width:var(--maxw); margin:0 auto; padding:0 28px; position:relative; z-index:1; }
+header.site { position:sticky; top:0; z-index:50; background:rgba(245,247,250,.88); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+.site-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:64px; flex-wrap:wrap; }
+.brand { display:flex; align-items:baseline; gap:12px; text-decoration:none; color:var(--ink); }
+.brand-name { font-family:var(--sans); font-weight:700; font-size:18px; }
+.brand-sub { font-family:var(--sans); font-size:10.5px; color:var(--ink-faint); letter-spacing:.04em; }
+.navlinks { display:flex; flex-wrap:wrap; gap:2px; }
+.navlinks a { color:var(--ink-dim); text-decoration:none; font-size:13.5px; font-weight:500; padding:8px 12px; }
+.navlinks a:hover, .navlinks a:focus-visible, .navlinks a[aria-current] { color:var(--blue); }
+.hero { padding:72px 0 64px; }
+.hero-grid { display:block; }
+.eyebrow { font-family:var(--sans); font-size:12px; color:var(--blue); letter-spacing:.08em; text-transform:uppercase; margin:0 0 18px; display:flex; align-items:center; gap:10px; }
+.eyebrow::before { content:''; width:22px; height:1px; background:var(--blue); }
+h1 { font-family:var(--sans); font-weight:700; font-size:clamp(36px,5.4vw,60px); line-height:1.05; letter-spacing:-.01em; margin:0 0 22px; }
+h1 em { font-style:normal; color:var(--blue); }
+.lede { font-size:17px; color:var(--ink-dim); max-width:58ch; margin:0 0 32px; line-height:1.65; }
+.actions { display:flex; gap:12px; flex-wrap:wrap; }
+.btn { font-family:var(--sans); font-size:13px; font-weight:500; padding:11px 20px; text-decoration:none; border:1px solid var(--ink); color:var(--ink); transition:all .15s ease; }
+.btn.primary { background:var(--ink); color:#fff; }
+.btn.primary:hover, .btn.primary:focus-visible { background:var(--blue); border-color:var(--blue); }
+.btn:not(.primary):hover, .btn:not(.primary):focus-visible { border-color:var(--blue); color:var(--blue); }
+section.block { padding:56px 0; border-top:1px solid var(--line); }
+.section-head { margin-bottom:32px; max-width:70ch; }
+.section-label { font-family:var(--sans); font-size:11.5px; color:var(--ink-faint); letter-spacing:.08em; text-transform:uppercase; display:block; margin-bottom:10px; }
+h2 { font-family:var(--sans); font-weight:600; font-size:clamp(24px,3vw,32px); margin:0; letter-spacing:-.01em; scroll-margin-top:90px; }
+.section-lede { margin:14px 0 0; font-size:16px; }
+.pillars { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); border-top:1px solid var(--line); border-left:1px solid var(--line); }
+.pillar { border-right:1px solid var(--line); border-bottom:1px solid var(--line); padding:28px 24px; background:var(--panel); }
+.pillar-tag { font-family:var(--sans); font-size:11px; color:var(--blue); display:block; margin-bottom:18px; }
+.pillar h3 { font-family:var(--sans); font-size:18px; font-weight:600; margin:0; line-height:1.3; }
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+.rows { list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
+.row { display:grid; grid-template-columns:170px 1fr; gap:16px; padding:13px 0; border-bottom:1px solid var(--line); font-size:14.5px; }
+.row-date { font-family:var(--sans); font-size:12px; color:var(--blue); padding-top:2px; }
+.contact-card { background:var(--panel); border:1px solid var(--line); padding:26px; display:grid; grid-template-columns:140px 1fr; gap:22px; align-items:center; }
+.contact-card img { width:140px; height:140px; object-fit:cover; display:block; border:1px solid var(--line); }
+.contact-card p { margin:0 0 8px; font-size:14.5px; color:var(--ink-dim); }
+.contact-card .name { font-family:var(--sans); font-weight:600; font-size:18px; color:var(--ink); }
+.mono { font-family:var(--sans); font-size:13px; }
+.news-block { margin-bottom:40px; }
+.news-head { display:flex; align-items:baseline; gap:14px; margin-bottom:10px; flex-wrap:wrap; }
+.news-label { font-family:var(--sans); font-size:12px; color:#fff; background:var(--blue); padding:3px 8px; letter-spacing:.03em; }
+.news-label:empty { display:none; }
+.news-head h3 { font-family:var(--sans); font-size:18px; font-weight:600; margin:0; }
+.news-list { list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
+.news-item { padding:13px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:18px; align-items:baseline; flex-wrap:wrap; }
+.news-text { margin:0; font-size:14.5px; flex:1 1 480px; }
+.news-text i { color:var(--ink-dim); }
+.news-link { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line-strong); }
+.news-link:hover, .news-link:focus-visible { color:var(--blue); border-color:var(--blue); }
+.chips { display:flex; gap:6px; flex-wrap:wrap; }
+.chip a { font-family:var(--sans); font-size:11px; color:var(--cyan); border:1px solid var(--line-strong); padding:3px 8px; text-decoration:none; white-space:nowrap; display:inline-block; background:var(--panel); }
+.chip a:hover, .chip a:focus-visible { color:var(--blue); border-color:var(--blue); }
+.tagset { display:flex; flex-wrap:wrap; gap:8px; }
+.tagset span { font-family:var(--sans); font-size:11.5px; color:var(--ink-dim); border:1px solid var(--line-strong); background:var(--panel); padding:4px 9px; }
+footer { padding:36px 0; border-top:1px solid var(--line); position:relative; z-index:1; }
+.footer-inner { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:13px; color:var(--ink-faint); }
+.footer-inner a { color:var(--ink-dim); text-decoration:none; margin-right:14px; }
+.footer-inner a:hover { color:var(--blue); }
+a:focus-visible, .btn:focus-visible { outline:2px solid var(--blue); outline-offset:2px; }
+@media (max-width: 860px) {
+  .hero { padding:44px 0 40px; } .hero-grid, .two-col { grid-template-columns:1fr; gap:32px; }
+  .brand-sub { display:none; } .wrap { padding:0 16px; }
+  .row { grid-template-columns:1fr; gap:2px; } .contact-card { grid-template-columns:96px 1fr; gap:16px; padding:18px; } .contact-card img { width:96px; height:96px; }
+}
+
+.page-hero { padding:56px 0 36px; }
+.page-hero h1 { font-size:clamp(34px,4.6vw,52px); margin:0 0 12px; }
+.page-hero .lede { margin:0; }
+.jump { display:flex; flex-wrap:wrap; gap:8px; margin-top:26px; }
+.jump a { font-family:var(--sans); font-size:11.5px; color:var(--ink-dim); border:1px solid var(--line-strong); background:var(--panel); padding:4px 10px; text-decoration:none; }
+.jump a:hover, .jump a:focus-visible { color:var(--blue); border-color:var(--blue); }
+.sub-head { font-family:var(--sans); font-size:18px; font-weight:600; margin:34px 0 10px; display:flex; align-items:center; gap:12px; }
+.sub-head::before { content:''; width:14px; height:2px; background:var(--cyan); }
+.entries { list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
+.entry { padding:14px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:18px; align-items:baseline; flex-wrap:wrap; }
+.entry-title { margin:0; font-size:15px; font-weight:500; flex:1 1 460px; }
+.team-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); border-top:1px solid var(--line); border-left:1px solid var(--line); }
+.member { background:var(--panel); border-right:1px solid var(--line); border-bottom:1px solid var(--line); padding:20px; display:grid; grid-template-columns:76px 1fr; gap:16px; align-items:start; }
+.member img { width:76px; height:76px; object-fit:cover; object-position:top; display:block; border:1px solid var(--line); background:var(--bg); }
+.member h3 { font-family:var(--sans); font-size:16px; font-weight:600; margin:0 0 4px; }
+.member p { margin:0 0 10px; font-size:13.5px; color:var(--ink-dim); line-height:1.5; }
+.pub-list { list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
+.pub-item { display:grid; grid-template-columns:52px 1fr; gap:12px; padding:14px 0; border-bottom:1px solid var(--line); }
+.pub-num { font-family:var(--sans); font-size:12px; color:var(--blue); padding-top:2px; }
+.pub-body { font-size:14px; line-height:1.6; }
+.pub-body b { font-weight:600; color:var(--ink); }
+.pub-body b i, .pub-body i b { font-style:normal; color:var(--blue); }
+.pub-body font[color] b i { color:var(--blue); }
+.pub-body .chips { margin-top:8px; }
+.note { font-size:14px; color:var(--ink-dim); margin:0 0 18px; }
+.note a { color:var(--blue); }
+.year-label { font-family:var(--sans); font-size:12px; color:#fff; background:var(--blue); padding:3px 9px; display:inline-block; margin:30px 0 8px; }
+@media (max-width: 860px) { .pub-item { grid-template-columns:40px 1fr; } .member { grid-template-columns:64px 1fr; } .member img { width:64px; height:64px; } }
+
+:root { --sans:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif; --mono:'DM Mono',ui-monospace,monospace; }
+.row-date, .pub-num, .pillar-tag, .news-label, .year-label { font-family:var(--mono); }
+.eyebrow, .section-label, .brand-sub { letter-spacing:.06em; }
+
+/* Dark theme (default). The light palette above is kept; delete this block to return to it. */
+:root { color-scheme:dark; --bg:#0B1119; --panel:#121A25; --ink:#E7EDF4; --ink-dim:#A8B6C6; --ink-faint:#8494A6; --line:#1E2935; --line-strong:#34445A; --blue:#7AA2FF; --blue-deep:#A9C2FF; --signal:#FF7A5C; --cyan:#45C8D6; }
+body::before { background:linear-gradient(180deg, rgba(11,17,25,.55), rgba(11,17,25,.92) 40%); }
+header.site { background:rgba(11,17,25,.86); }
+.btn.primary, .btn.primary:hover, .btn.primary:focus-visible { color:var(--bg); }
+.news-label, .year-label { color:var(--bg); }
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap site-inner">
+  <a class="brand" href="index.html"><span class="brand-name">BRAIN Lab</span><span class="brand-sub">BILGIC RECONSTRUCTION ACQUISITION FOR IMAGING NEUROSCIENCE</span></a>
+  <nav class="navlinks" aria-label="Main"><a href="index.html">Home</a><a href="team.html" aria-current="page">Team</a><a href="publications.html">Publications</a><a href="software.html">Software</a><a href="BerkinBilgic_CV.pdf">CV</a></nav>
+</div></header>
+<main>
+<section class="page-hero"><div class="wrap"><p class="eyebrow">BRAIN Lab · Team</p><h1>Team</h1><nav class="jump" aria-label="Sections"><a href="#faculty">Faculty</a><a href="#research-fellows">Research Fellows</a><a href="#graduate-undergraduate">Graduate / Undergraduate</a><a href="#alumni">Alumni</a></nav></div></section><section class="block" id="faculty"><div class="wrap"><div class="section-head"><span class="section-label">1 person</span><h2>Faculty</h2></div><div class="team-grid"><article class="member"><img src="berkin.png" alt="Berkin Bilgic"><div><h3>Berkin Bilgic</h3><p>Associate Professor of Radiology, Martinos Center, Mass General Hospital</p><div class="chips"><span class="chip"><a href="https://scholar.google.com/citations?user=UiSXwdIAAAAJ&hl=en">Google Scholar</a></span></div></div></article></div></div></section><section class="block" id="research-fellows"><div class="wrap"><div class="section-head"><span class="section-label">4 people</span><h2>Research Fellows</h2></div><div class="team-grid"><article class="member"><img src="xingwang.jpg" alt="Xingwang Yong"><div><h3>Xingwang Yong</h3><p>Research Fellow</p><div class="chips"><span class="chip"><a href="https://scholar.google.com/citations?user=N7loHycAAAAJ&hl=en&inst=7575085548378563675&oi=ao">Google Scholar</a></span></div></div></article><article class="member"><img src="unay.jpeg" alt="Unay Dorken Gallastegi"><div><h3>Unay Dorken Gallastegi</h3><p>Research Fellow</p><div class="chips"><span class="chip"><a href="https://scholar.google.com/citations?user=mNXmo0QAAAAJ&hl=en&inst=7575085548378563675&oi=ao">Google Scholar</a></span></div></div></article><article class="member"><img src="yiyun.jpeg" alt="Yiyun Dong"><div><h3>Yiyun Dong</h3><p>Research Fellow (co-advised w/ Dr Borjan Gagoski)</p></div></article><article class="member"><img src="horace.jpg" alt="Horace Zhang"><div><h3>Horace Zhang</h3><p>Research Fellow (co-advised w/ Drs Jason Stockmann, Aapo Nummenmaa and Susie Huang)</p><div class="chips"><span class="chip"><a href="https://scholar.google.com/citations?user=0OoKikgAAAAJ&hl=en">Google Scholar</a></span></div></div></article></div></div></section><section class="block" id="graduate-undergraduate"><div class="wrap"><div class="section-head"><span class="section-label">2 people</span><h2>Graduate / Undergraduate</h2></div><div class="team-grid"><article class="member"><img src="yuting.jpg" alt="Yuting Chen"><div><h3>Yuting Chen</h3><p>graduate student, Zhejiang University (Dr Huafeng Liu's lab)</p><div class="chips"><span class="chip"><a href="https://scholar.google.com/citations?user=QCK_NKMAAAAJ&hl=en&inst=7575085548378563675&oi=sra">Google Scholar</a></span></div></div></article><article class="member"><img src="jiye.jpg" alt="Jiye Kim"><div><h3>Jiye Kim</h3><p>graduate student, Seoul National University (Dr Jongho Lee's lab)</p><div class="chips"><span class="chip"><a href="https://scholar.google.com/citations?user=6HlxVcsAAAAJ&hl=en&inst=7575085548378563675">Google Scholar</a></span></div></div></article></div></div></section><section class="block" id="alumni"><div class="wrap"><div class="section-head"><span class="section-label">23 people</span><h2>Alumni</h2></div><div class="team-grid"><article class="member"><img src="yohan.png" alt="Yohan Jun, PhD"><div><h3>Yohan Jun, PhD</h3><p>Assistant Prof., Korea University</p><div class="chips"><span class="chip"><a href="https://scholar.google.co.uk/citations?user=rSlCtLYAAAAJ&hl=en&oi=ao">Google Scholar</a></span></div></div></article><article class="member"><img src="amir.png" alt="Amir Heydari"><div><h3>Amir Heydari</h3><p>Amirkabir University of Technology</p><div class="chips"><span class="chip"><a href="https://scholar.google.com/citations?user=l9289IcAAAAJ&hl=en&inst=7575085548378563675&oi=ao">Google Scholar</a></span></div></div></article><article class="member"><img src="tommy.jpg" alt="Taewoong (Tommy) Lee"><div><h3>Taewoong (Tommy) Lee</h3><p>undergraduate student, Harvard University</p></div></article><article class="member"><img src="shizhuo.png" alt="Shizhuo Li"><div><h3>Shizhuo Li</h3><p>graduate student, Zhejiang University</p></div></article><article class="member"><img src="shohei.png" alt="Shohei Fujita"><div><h3>Shohei Fujita</h3><p>Research Fellow</p><div class="chips"><span class="chip"><a href="https://sites.google.com/view/shoheifujita">Homepage</a></span></div></div></article><article class="member"><img src="jaejin.jpg" alt="Jaejin Cho, PhD"><div><h3>Jaejin Cho, PhD</h3><p>Assistant Prof., Sejong University</p><div class="chips"><span class="chip"><a href="https://scholar.google.co.uk/citations?user=_jmLTlQAAAAJ&hl=en&oi=sra">Google Scholar</a></span><span class="chip"><a href="https://github.com/jaejin-cho">Github</a></span></div></div></article><article class="member"><img src="tae.jpg" alt="Tae Hyung Kim, PhD"><div><h3>Tae Hyung Kim, PhD</h3><p>Assistant Prof. of Computer Engineering, Hongik University</p><div class="chips"><span class="chip"><a href="https://sites.google.com/usc.edu/taekim/">Homepage</a></span></div></div></article><article class="member"><img src="xpc.jpg" alt="Pengcheng Xu"><div><h3>Pengcheng Xu</h3><p>Research Fellow</p></div></article><article class="member"><img src="quentin.jpeg" alt="Quentin Uhl"><div><h3>Quentin Uhl</h3><p>graduate student, Lausanne University Hospital (Dr Ileana Jelescu's lab)</p><div class="chips"><span class="chip"><a href="https://wp.unil.ch/mic-map/quentin-uhl/">webpage</a></span></div></div></article><article class="member"><img src="yigit.jpeg" alt="Mehmet Yigit Avci"><div><h3>Mehmet Yigit Avci</h3><p>graduate student, Technical University of Munich (Dr Julia Schnabel's lab)</p><div class="chips"><span class="chip"><a href="https://scholar.google.com/citations?user=G-x5LvkAAAAJ&hl=en&oi=ao">Google Scholar</a></span></div></div></article><article class="member"><img src="arda.jpg" alt="Arda Vurankaya"><div><h3>Arda Vurankaya</h3><p>undergraduate student, Bogazici University</p></div></article><article class="member"><img src="caique.png" alt="Caique de Oliveira Kobayashi"><div><h3>Caique de Oliveira Kobayashi</h3><p>graduate student, Technical University of Munich</p></div></article><article class="member"><img src="gabriel.png" alt="Gabriel Varela-Mattatall"><div><h3>Gabriel Varela-Mattatall</h3><p>visiting research fellow (from Dr Ravi Menon's lab)</p><div class="chips"><span class="chip"><a href="https://scholar.google.co.uk/citations?user=IOGvn6sAAAAJ&hl=en&oi=ao">Google Scholar</a></span></div></div></article><article class="member"><img src="yamin.jpg" alt="Yamin Arefeen"><div><h3>Yamin Arefeen</h3><p>Graduate Student (co-advised w/ Dr Elfar Adalsteinsson)</p><div class="chips"><span class="chip"><a href="https://www.rle.mit.edu/mri/people/">Homepage</a></span><span class="chip"><a href="https://github.com/YaminArefeen">Github</a></span></div></div></article><article class="member"><img src="xiaoqing.JPG" alt="Xiaoqing Wang"><div><h3>Xiaoqing Wang</h3><p>Research Fellow</p><div class="chips"><span class="chip"><a href="https://scholar.google.com/citations?user=99FdJPgAAAAJ&hl=en&oi=sra">Google Scholar</a></span></div></div></article><article class="member"><img src="deni.jpg" alt="Denizhan Kurban"><div><h3>Denizhan Kurban</h3><p>graduate student, Maastricht University</p></div></article><article class="member"><img src="mengze.jpg" alt="Mengze Gao"><div><h3>Mengze Gao</h3><p>undergraduate student, Tsinghua University</p></div></article><article class="member"><img src="nejat.jpeg" alt="Nejat Can"><div><h3>Nejat Can</h3><p>undergraduate student, University of Rochester (co-advised w/ Dr Qiyuan Tian)</p></div></article><article class="member"><img src="zijing.jpg" alt="Zijing Zhang"><div><h3>Zijing Zhang</h3><p>Graduate student</p><div class="chips"><span class="chip"><a href="https://scholar.google.co.uk/citations?user=7H5h5roAAAAJ&hl=en&oi=sra">Google Scholar</a></span></div></div></article><article class="member"><img src="zhifeng.jpg" alt="Zhifeng Chen, PhD"><div><h3>Zhifeng Chen, PhD</h3><p>Research Fellow</p><div class="chips"><span class="chip"><a href="https://scholar.google.com/citations?user=E5oNDSwAAAAJ&hl=zh-CN">Google Scholar</a></span></div></div></article><article class="member"><img src="onur2.png" alt="Onur Beker"><div><h3>Onur Beker</h3><p>Undergraduate student</p><div class="chips"><span class="chip"><a href="https://scholar.google.co.uk/citations?user=swMOohkAAAAJ&hl=en&oi=ao">Google Scholar</a></span></div></div></article><article class="member"><img src="wonil.jpg" alt="Wonil Lee"><div><h3>Wonil Lee</h3><p>Graduate student</p><div class="chips"><span class="chip"><a href="https://scholar.google.co.uk/citations?user=UOPFtJQAAAAJ&hl=en&oi=ao">Google Scholar</a></span></div></div></article><article class="member"><img src="seohee.jpg" alt="Seohee So"><div><h3>Seohee So</h3><p>Graduate student</p><div class="chips"><span class="chip"><a href="https://www.linkedin.com/in/seohee-so-108259183/">Linkedin</a></span></div></div></article></div></div></section>
+</main>
+<footer><div class="wrap footer-inner"><div><a href="index.html">Home</a><a href="team.html">Team</a><a href="publications.html">Publications</a><a href="software.html">Software</a><a href="BerkinBilgic_CV.pdf">CV</a></div><div>Last update September 2026</div></div></footer>
+</body>
+</html>
