@@ -11,6 +11,7 @@ Source of the website of the BRAIN Lab (Bilgic Reconstruction Acquisition for Im
 | `publications.html` | Invited and proffered talks, journal papers, conference papers and abstracts, theses, patents |
 | `software.html` | Open-source code, data and pulse sequences, most of them in the [berkinbilgic](https://github.com/berkinbilgic) repositories |
 | `images/` | Photos shown on the home and team pages |
+| `tools/echo_abstracts/` | Scripts that add ISMRM abstracts from [echo.ismrm.org](https://echo.ismrm.org/) to the Conference Abstracts list on `publications.html` (see its [README](tools/echo_abstracts/README.md)) |
 
 ## Notes
 
